@@ -16,13 +16,27 @@ function initMobileNav() {
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     links.classList.toggle('open');
     toggle.classList.toggle('active');
     document.body.classList.toggle('menu-open');
   });
 
-  // Close menu on link click
+  // Dropdown toggles on mobile (click instead of hover)
+  links.querySelectorAll('.nav-dropdown-toggle').forEach(dt => {
+    dt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dropdown = dt.closest('.nav-dropdown');
+      // Close other dropdowns
+      links.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('expanded');
+      });
+      dropdown.classList.toggle('expanded');
+    });
+  });
+
+  // Close menu when clicking a real link (not dropdown toggles)
   links.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       links.classList.remove('open');
@@ -33,7 +47,8 @@ function initMobileNav() {
 
   // Close on outside tap
   document.addEventListener('click', (e) => {
-    if (!toggle.contains(e.target) && !links.contains(e.target) && links.classList.contains('open')) {
+    const toggleParent = toggle.parentElement;
+    if (!toggleParent.contains(e.target) && !links.contains(e.target) && links.classList.contains('open')) {
       links.classList.remove('open');
       toggle.classList.remove('active');
       document.body.classList.remove('menu-open');
