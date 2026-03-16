@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikecare360 — India's #1 Bike Care Brand</title>
+  <meta name="description" content="Trusted cleaners, lubes, tools, and accessories for every motorcycle. Built by passionate bikers, trusted by 1.5 lakh+ riders across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏍️</span>
+        <span>Bike<span class="logo-accent">care</span>360</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            Brands
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="pages/brands/honda.html">Honda</a>
+            <a href="pages/brands/hero.html">Hero</a>
+            <a href="pages/brands/bajaj.html">Bajaj</a>
+            <a href="pages/brands/tvs.html">TVS</a>
+            <a href="pages/brands/yamaha.html">Yamaha</a>
+            <a href="pages/brands/royal-enfield.html">Royal Enfield</a>
+            <a href="pages/brands/ktm.html">KTM</a>
+            <a href="pages/brands/suzuki.html">Suzuki</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            Categories
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="pages/categories/chain-care.html">Chain Care</a>
+            <a href="pages/categories/engine-oil.html">Engine Oil</a>
+            <a href="pages/categories/cleaners.html">Cleaners</a>
+            <a href="pages/categories/tools.html">Tools</a>
+            <a href="pages/categories/gps-trackers.html">GPS Trackers</a>
+            <a href="pages/categories/accessories.html">Accessories</a>
+          </div>
+        </div>
+
+        <a href="pages/about.html">About</a>
+        <a href="https://bikecare360.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit Store</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-visual"><div class="gear"></div></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">🏆 India's Most Trusted Bike Care Brand</div>
+        <h1>Your Bike Deserves <span class="highlight">The Best Care</span></h1>
+        <p class="hero-desc">Quality cleaners, lubes, tools, and accessories — handpicked and tested by passionate bikers. Trusted by 1.5 lakh+ riders across India.</p>
+        <div class="hero-ctas">
+          <a href="#best-sellers" class="btn btn-primary">Shop Best Sellers</a>
+          <a href="https://youtube.com/@Bikecare360Tamil" target="_blank" rel="noopener" class="btn btn-outline">▶ Watch on YouTube</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number">1.65M+</div>
+            <div class="label">YouTube Subscribers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">1.5L+</div>
+            <div class="label">Happy Customers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">11+</div>
+            <div class="label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>Shop by Category</h2>
+        <p>Find exactly what your bike needs</p>
+      </div>
+      <div class="categories-grid" id="categories-grid"></div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section id="best-sellers">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>Best Sellers</h2>
+        <p>Our most popular products — loved by riders across India</p>
+      </div>
+      <div class="products-grid" id="best-sellers-grid"></div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section id="brands">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>Shop by Brand</h2>
+        <p>Find parts and accessories specific to your motorcycle</p>
+      </div>
+      <div class="brands-grid" id="brands-grid"></div>
+    </div>
+  </section>
+
+  <!-- All Products -->
+  <section id="all-products">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>All Products</h2>
+        <p>Browse our complete catalog</p>
+      </div>
+      <div class="products-grid" id="all-products-grid"></div>
+    </div>
+  </section>
+
+  <!-- YouTube Section -->
+  <section class="video-section" id="youtube">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>See It In Action</h2>
+        <p>1.65M+ subscribers trust our reviews and tutorials</p>
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UU_placeholder" title="Bikecare360 Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-info">
+            <h4>How to Clean Your Bike Chain Like a Pro</h4>
+            <p>Step-by-step chain cleaning tutorial using Motul C1+C2</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UU_placeholder" title="Bikecare360 Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-info">
+            <h4>Best Engine Oil for Your Bike — Complete Guide</h4>
+            <p>Comparing mineral, semi-synthetic, and fully synthetic oils</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UU_placeholder" title="Bikecare360 Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-info">
+            <h4>GPS Tracker Installation — Full Tutorial</h4>
+            <p>Installing Fleettrack GPS on Royal Enfield Classic 350</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://youtube.com/@Bikecare360Tamil" target="_blank" rel="noopener" class="btn btn-outline">View All Videos on YouTube →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section id="trust">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>Why Riders Trust Us</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">📺</div>
+          <div class="trust-number">1.65M+</div>
+          <div class="trust-label">YouTube Subscribers</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">👥</div>
+          <div class="trust-number">5L+</div>
+          <div class="trust-label">Social Media Followers</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">⭐</div>
+          <div class="trust-number">11+</div>
+          <div class="trust-label">Years of Experience</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">🏆</div>
+          <div class="trust-number">1.5L+</div>
+          <div class="trust-label">Satisfied Customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <div class="accent-line"></div>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does shipping take?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Orders are dispatched within 24-48 hours. Delivery takes 2-7 business days depending on your location. We ship across India via trusted courier partners with tracking.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I receive a damaged product?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We offer a 3-day replacement window from the date of delivery. Simply contact us with photos of the damaged product and we'll arrange a replacement at no extra cost.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Are all products authentic and genuine?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">100% guaranteed. We source directly from authorized distributors and manufacturers. Every product comes with original packaging and manufacturer warranty where applicable.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer bulk/dealer discounts?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes! We offer special pricing for bulk orders and dealer partnerships. Contact us on WhatsApp at +91 8668008760 or email for dealer inquiry details.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Which payment methods do you accept?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, net banking, and Cash on Delivery (COD). All online payments are processed securely through Shopify Payments.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Bike<span class="accent">care</span>360</div>
+          <p>Built by passionate bikers, for bikers. India's go-to destination for trusted cleaners, lubes, sprays, and essential motorcycle accessories.</p>
+          <div class="footer-social">
+            <a href="https://youtube.com/@Bikecare360Tamil" target="_blank" rel="noopener" aria-label="YouTube">📺</a>
+            <a href="https://instagram.com/bikecare360" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="https://facebook.com/bikecare360" target="_blank" rel="noopener" aria-label="Facebook">👤</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="#best-sellers">Best Sellers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#brands">Brands</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="https://bikecare360.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><a href="https://bikecare360.com/policies/refund-policy" target="_blank" rel="noopener">Refund Policy</a></li>
+            <li><a href="https://bikecare360.com/policies/shipping-policy" target="_blank" rel="noopener">Shipping Policy</a></li>
+            <li><a href="https://bikecare360.com/policies/terms-of-service" target="_blank" rel="noopener">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span> P.S Motors, Madurai, Tamil Nadu</li>
+            <li><span class="contact-icon">📞</span> +91 8668008760</li>
+            <li><span class="contact-icon">🕐</span> Mon-Fri, 9AM - 5PM</li>
+            <li><span class="contact-icon">📋</span> GSTIN: 33CBYPM6952J1ZU</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bikecare360. All rights reserved.</p>
+        <div class="footer-payments">
+          <span>UPI</span>
+          <span>GPay</span>
+          <span>PhonePe</span>
+          <span>Cards</span>
+          <span>COD</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/918668008760?text=Hi%20Bikecare360!%20I%20have%20a%20question." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Render categories
+    const catGrid = document.getElementById('categories-grid');
+    if (catGrid) {
+      catGrid.innerHTML = CATEGORIES.map(cat => `
+        <a href="pages/categories/${cat.slug}.html" class="category-tile">
+          <div class="icon">${cat.icon}</div>
+          <h4>${cat.name}</h4>
+          <div class="count">${cat.count} Products</div>
+        </a>
+      `).join('');
+    }
+
+    // Render best sellers
+    const bsGrid = document.getElementById('best-sellers-grid');
+    if (bsGrid) {
+      bsGrid.innerHTML = getBestSellers().map(p => renderProductCard(p)).join('');
+    }
+
+    // Render brands
+    const brandsGrid = document.getElementById('brands-grid');
+    if (brandsGrid) {
+      brandsGrid.innerHTML = BRANDS.map(brand => `
+        <a href="pages/brands/${brand.slug}.html" class="brand-card">
+          <div class="brand-logo">${brand.name.charAt(0)}</div>
+          <div class="brand-name">${brand.name}</div>
+        </a>
+      `).join('');
+    }
+
+    // Render all products
+    const allGrid = document.getElementById('all-products-grid');
+    if (allGrid) {
+      allGrid.innerHTML = PRODUCTS.map(p => renderProductCard(p)).join('');
+    }
+  </script>
+
+</body>
+</html>
