@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initScrollTop();
   initHeaderScroll();
+  initMobileBottomNav();
 });
 
-// Mobile Navigation
+// Mobile Navigation (hamburger menu)
 function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
@@ -18,6 +19,7 @@ function initMobileNav() {
   toggle.addEventListener('click', () => {
     links.classList.toggle('open');
     toggle.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
   });
 
   // Close menu on link click
@@ -25,7 +27,17 @@ function initMobileNav() {
     link.addEventListener('click', () => {
       links.classList.remove('open');
       toggle.classList.remove('active');
+      document.body.classList.remove('menu-open');
     });
+  });
+
+  // Close on outside tap
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !links.contains(e.target) && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
   });
 }
 
@@ -54,23 +66,37 @@ function initScrollTop() {
 
   window.addEventListener('scroll', () => {
     btn.classList.toggle('visible', window.scrollY > 500);
-  });
+  }, { passive: true });
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
-// Header background on scroll
+// Header shadow on scroll
 function initHeaderScroll() {
   const header = document.querySelector('.header');
   if (!header) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.style.background = 'rgba(13, 13, 13, 0.98)';
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+}
+
+// Mobile bottom nav — hide on scroll down, show on scroll up
+function initMobileBottomNav() {
+  const bottomNav = document.querySelector('.mobile-bottom-nav');
+  if (!bottomNav) return;
+
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && currentScroll > 200) {
+      bottomNav.classList.add('hidden');
     } else {
-      header.style.background = 'rgba(13, 13, 13, 0.95)';
+      bottomNav.classList.remove('hidden');
     }
-  });
+    lastScroll = currentScroll;
+  }, { passive: true });
 }

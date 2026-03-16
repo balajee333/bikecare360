@@ -16,8 +16,7 @@
   <header class="header">
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">🏍️</span>
-        <span>Bike<span class="logo-accent">care</span>360</span>
+        <img src="images/banners/logo.png" alt="Bikecare360" class="logo-img">
       </a>
 
       <div class="nav-links">
@@ -67,8 +66,9 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-visual"><div class="gear"></div></div>
+    <div class="hero-bg">
+      <img src="images/banners/hero-banner.png" alt="Bikecare360 Banner" class="hero-bg-image">
+    </div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">🏆 India's Most Trusted Bike Care Brand</div>
@@ -128,7 +128,7 @@
         <h2>Shop by Brand</h2>
         <p>Find parts and accessories specific to your motorcycle</p>
       </div>
-      <div class="brands-grid" id="brands-grid"></div>
+      <div class="brands-grid brands-scroll" id="brands-grid"></div>
     </div>
   </section>
 
@@ -317,7 +317,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Bikecare360. All rights reserved.</p>
+        <p>&copy; 2025 Bikecare360. All rights reserved.</p>
         <div class="footer-payments">
           <span>UPI</span>
           <span>GPay</span>
@@ -334,6 +334,26 @@
 
   <!-- Scroll to Top -->
   <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item active">
+      <span class="mobile-nav-icon">🏠</span>
+      <span class="mobile-nav-label">Home</span>
+    </a>
+    <a href="#categories" class="mobile-nav-item">
+      <span class="mobile-nav-icon">📦</span>
+      <span class="mobile-nav-label">Categories</span>
+    </a>
+    <a href="#brands" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🏷️</span>
+      <span class="mobile-nav-label">Brands</span>
+    </a>
+    <a href="https://bikecare360.com" target="_blank" rel="noopener" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🛒</span>
+      <span class="mobile-nav-label">Store</span>
+    </a>
+  </nav>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
@@ -361,7 +381,7 @@
     if (brandsGrid) {
       brandsGrid.innerHTML = BRANDS.map(brand => `
         <a href="pages/brands/${brand.slug}.html" class="brand-card">
-          <div class="brand-logo">${brand.name.charAt(0)}</div>
+          ${brand.image ? `<img src="${brand.image}" alt="${brand.name}" class="brand-logo-img">` : `<div class="brand-logo">${brand.name.charAt(0)}</div>`}
           <div class="brand-name">${brand.name}</div>
         </a>
       `).join('');
