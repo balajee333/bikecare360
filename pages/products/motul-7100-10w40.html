@@ -46,9 +46,28 @@
         <a href="../about.html">About</a>
         <a href="https://bikecare360.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit Store</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="search-toggle" aria-label="Search" onclick="openSearch()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay" onclick="if(event.target===this)closeSearch()">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search products, brands..." autocomplete="off">
+        <button class="search-close" onclick="closeSearch()">&times;</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
 
   <section class="page-header">
     <div class="container">
@@ -131,7 +150,7 @@
       document.getElementById('product-detail').innerHTML = `
         <div class="product-gallery">
           <div class="main-image">
-            <img src="${product.image}" alt="${product.name}">
+            <img src="../../${product.image}" width="533" height="533" decoding="async" alt="${product.name}">
           </div>
         </div>
         <div class="product-detail-info">

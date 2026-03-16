@@ -100,3 +100,72 @@ function initMobileBottomNav() {
     lastScroll = currentScroll;
   }, { passive: true });
 }
+
+// Search
+function openSearch() {
+  const overlay = document.getElementById('searchOverlay');
+  const input = document.getElementById('searchInput');
+  if (!overlay) return;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => input && input.focus(), 100);
+}
+
+function closeSearch() {
+  const overlay = document.getElementById('searchOverlay');
+  const input = document.getElementById('searchInput');
+  const results = document.getElementById('searchResults');
+  if (!overlay) return;
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  if (input) input.value = '';
+  if (results) results.innerHTML = '';
+}
+
+// Determine base path for product links based on current page depth
+function getBasePath() {
+  const path = window.location.pathname;
+  if (path.includes('/pages/products/') || path.includes('/pages/brands/') || path.includes('/pages/categories/')) {
+    return '../../';
+  } else if (path.includes('/pages/')) {
+    return '../';
+  }
+  return '';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('searchInput');
+  const results = document.getElementById('searchResults');
+  if (!input || !results) return;
+
+  let debounce;
+  input.addEventListener('input', () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      const q = input.value.trim();
+      if (q.length < 2) { results.innerHTML = ''; return; }
+      if (typeof searchProducts !== 'function') return;
+      const matches = searchProducts(q).slice(0, 8);
+      const base = getBasePath();
+      if (matches.length === 0) {
+        results.innerHTML = '<div class="search-empty">No products found</div>';
+        return;
+      }
+      results.innerHTML = matches.map(p => `
+        <a href="${base}pages/products/${p.id}.html" class="search-result-item">
+          <img src="${base}${p.image}" alt="${p.name}" loading="lazy">
+          <div class="search-result-info">
+            <h4>${p.name}</h4>
+            <div class="search-result-meta">${p.brand} · ${p.category.replace(/-/g,' ')}</div>
+          </div>
+          <div class="search-result-price">${formatPrice(p.price)}</div>
+        </a>
+      `).join('');
+    }, 200);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSearch();
+  });
+});

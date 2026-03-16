@@ -586,6 +586,8 @@ section:nth-child(even) {
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition);
+  content-visibility: auto;
+  decoding: async;
 }
 
 .product-card:hover .product-image img {
@@ -1649,5 +1651,222 @@ section:nth-child(even) {
   .product-detail-info .detail-meta {
     flex-direction: column;
     gap: 0.75rem;
+  }
+}
+
+/* ============================================
+   Search
+   ============================================ */
+
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.search-overlay.active {
+  display: flex;
+}
+
+.search-box {
+  background: #FFFFFF;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  gap: 0.75rem;
+}
+
+.search-input-wrap svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-white);
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.search-results {
+  max-height: 400px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+  text-decoration: none;
+  color: var(--text-white);
+}
+
+.search-result-item:hover {
+  background: var(--primary-light);
+}
+
+.search-result-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #F9FAFB;
+}
+
+.search-result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-info h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-info .search-result-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.search-result-price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.search-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Product Filters / Sort Bar
+   ============================================ */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-bar label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-bar select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  color: var(--text-white);
+  background: var(--bg-card);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%236B7280' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  min-height: 44px;
+}
+
+.filter-bar select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.filter-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    gap: 0.5rem;
+  }
+
+  .filter-bar select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .filter-count {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .search-overlay {
+    padding-top: 20px;
+  }
+
+  .search-results {
+    max-height: 60vh;
   }
 }

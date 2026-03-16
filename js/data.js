@@ -1,16 +1,12 @@
-// ============================================
-// Bikecare360 — Product & Category Data
-// ============================================
-
 const SHOPIFY_BASE = 'https://bikecare360.com';
 
 const CATEGORIES = [
-  { id: 'chain-care', name: 'Chain Care', icon: '⛓️', count: 12, slug: 'chain-care' },
-  { id: 'engine-oil', name: 'Engine Oil', icon: '🛢️', count: 18, slug: 'engine-oil' },
-  { id: 'cleaners', name: 'Cleaners', icon: '✨', count: 15, slug: 'cleaners' },
-  { id: 'tools', name: 'Tools', icon: '🔧', count: 10, slug: 'tools' },
-  { id: 'gps-trackers', name: 'GPS Trackers', icon: '📍', count: 5, slug: 'gps-trackers' },
-  { id: 'accessories', name: 'Accessories', icon: '🏍️', count: 20, slug: 'accessories' },
+  { id: 'chain-care', name: 'Chain Care', icon: '⛓️', count: 8, slug: 'chain-care' },
+  { id: 'engine-oil', name: 'Engine Oil', icon: '🛢️', count: 30, slug: 'engine-oil' },
+  { id: 'cleaners', name: 'Cleaners', icon: '✨', count: 4, slug: 'cleaners' },
+  { id: 'tools', name: 'Tools', icon: '🔧', count: 4, slug: 'tools' },
+  { id: 'gps-trackers', name: 'GPS Trackers', icon: '📍', count: 1, slug: 'gps-trackers' },
+  { id: 'accessories', name: 'Accessories', icon: '🏍️', count: 16, slug: 'accessories' },
 ];
 
 const BRANDS = [
@@ -25,253 +21,131 @@ const BRANDS = [
 ];
 
 const PRODUCTS = [
-  {
-    id: 'cordless-impact-wrench',
-    name: 'INGCO 20V Cordless Impact Wrench',
-    brand: 'INGCO',
-    category: 'tools',
-    price: 6999,
-    originalPrice: 8000,
-    rating: 4.5,
-    reviews: 128,
-    badge: 'sale',
-    image: 'images/products/ingco-impact-wrench.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/ingco-20v-cordless-impact-wrench',
-    description: 'Professional-grade 20V cordless impact wrench for quick wheel changes and heavy-duty bolting. Brushless motor delivers 300Nm torque.',
-    features: ['300Nm Max Torque', '20V Lithium Battery', 'LED Work Light', '2-Year Warranty'],
-    bikeBrands: ['honda', 'hero', 'bajaj', 'tvs', 'yamaha', 'royal-enfield', 'ktm', 'suzuki'],
-  },
-  {
-    id: 'fuel-pump-test-kit',
-    name: 'Motorcycle Fuel Pump Test Kit',
-    brand: 'Bikecare360',
-    category: 'tools',
-    price: 1899,
-    originalPrice: 2500,
-    rating: 4.3,
-    reviews: 67,
-    badge: 'new',
-    image: 'images/products/fuel-pump-test-kit.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/motorcycle-fuel-pump-test-kit',
-    description: 'Diagnose fuel delivery issues with this comprehensive test kit. Works with all major motorcycle fuel injection systems.',
-    features: ['Universal Fit', 'Pressure Gauge Included', 'Carrying Case', '1-Year Warranty'],
-    bikeBrands: ['honda', 'hero', 'bajaj', 'tvs', 'yamaha', 'royal-enfield', 'ktm', 'suzuki'],
-  },
-  {
-    id: 'motul-chain-care-kit',
-    name: 'Motul Chain Care Kit (C1+C2)',
-    brand: 'Motul',
-    category: 'chain-care',
-    price: 979,
-    originalPrice: 1130,
-    rating: 4.7,
-    reviews: 342,
-    badge: 'youtube',
-    image: 'images/products/motul-chain-care-kit.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/motul-chain-care-kit',
-    description: 'Complete chain maintenance kit with C1 Chain Clean and C2 Chain Lube. Extends chain life and reduces maintenance frequency.',
-    features: ['C1 Chain Clean 400ml', 'C2 Chain Lube 400ml', 'For O-Ring & X-Ring Chains', 'As Seen on YouTube'],
-    bikeBrands: ['bajaj', 'yamaha', 'royal-enfield', 'ktm'],
-  },
-  {
-    id: 'fleettrack-gps',
-    name: 'Fleettrack GPS Tracker for Bikes',
-    brand: 'Fleettrack',
-    category: 'gps-trackers',
-    price: 2499,
-    originalPrice: 5999,
-    rating: 4.2,
-    reviews: 89,
-    badge: 'sale',
-    image: 'images/products/fleettrack-gps.png',
-    shopifyUrl: SHOPIFY_BASE + '/products/fleettrack-gps-tracker',
-    description: 'Real-time GPS tracking for your motorcycle. Anti-theft alerts, trip history, and geofencing via mobile app.',
-    features: ['Real-time Tracking', 'Anti-theft Alerts', 'Waterproof IP67', '1-Year Free SIM'],
-    bikeBrands: ['honda', 'hero', 'bajaj', 'tvs', 'yamaha', 'royal-enfield', 'ktm', 'suzuki'],
-  },
-  {
-    id: 'motul-7100-10w40',
-    name: 'Motul 7100 4T 10W-40 Synthetic Oil',
-    brand: 'Motul',
-    category: 'engine-oil',
-    price: 899,
-    originalPrice: 1050,
-    rating: 4.8,
-    reviews: 512,
-    badge: 'youtube',
-    image: 'images/products/motul-7100-10w40.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/motul-7100-10w40',
-    description: '100% synthetic 4-stroke engine oil with ester technology. Superior engine protection and smooth clutch performance.',
-    features: ['100% Synthetic', 'Ester Technology', 'JASO MA2 Certified', '1 Litre'],
-    bikeBrands: ['honda', 'hero', 'bajaj', 'tvs', 'yamaha', 'royal-enfield', 'ktm', 'suzuki'],
-  },
-  {
-    id: 'wavex-bike-wash',
-    name: 'Wavex Bike Body Wash Shampoo',
-    brand: 'Wavex',
-    category: 'cleaners',
-    price: 349,
-    originalPrice: 499,
-    rating: 4.4,
-    reviews: 231,
-    badge: 'sale',
-    image: 'images/products/carburetor-cleaner.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/wavex-bike-wash',
-    description: 'pH-balanced motorcycle shampoo with foam cannon compatibility. Removes grime without damaging paint or decals.',
-    features: ['pH Balanced', 'Foam Cannon Ready', 'Safe on All Surfaces', '500ml'],
-    bikeBrands: ['honda', 'hero', 'bajaj', 'tvs', 'yamaha', 'royal-enfield', 'ktm', 'suzuki'],
-  },
-  {
-    id: 're-air-filter',
-    name: 'Royal Enfield Air Filter Element',
-    brand: 'Royal Enfield',
-    category: 'accessories',
-    price: 450,
-    originalPrice: 550,
-    rating: 4.6,
-    reviews: 156,
-    badge: null,
-    image: 'images/products/re-air-filter-1.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/re-air-filter',
-    description: 'Genuine-spec air filter element for Royal Enfield Classic, Bullet, and Meteor models. Direct replacement, no modifications needed.',
-    features: ['Direct Fit', 'High Filtration', 'Long Service Life', 'OE Spec'],
-    bikeBrands: ['royal-enfield'],
-  },
-  {
-    id: 'ktm-brake-pads',
-    name: 'KTM Duke/RC Front Brake Pads',
-    brand: 'Bikecare360',
-    category: 'accessories',
-    price: 599,
-    originalPrice: 799,
-    rating: 4.5,
-    reviews: 98,
-    badge: 'sale',
-    image: 'images/products/honda-brake-shoes.jpg',
-    shopifyUrl: SHOPIFY_BASE + '/products/ktm-duke-rc-brake-pads',
-    description: 'Sintered front brake pads for KTM Duke 200/250/390 and RC series. Excellent stopping power in all weather conditions.',
-    features: ['Sintered Compound', 'All-Weather Performance', 'KTM Duke/RC Fitment', 'Set of 2'],
-    bikeBrands: ['ktm'],
-  },
+  // === TOOLS ===
+  { id: 'cordless-impact-wrench', name: 'INGCO 20V Cordless Impact Wrench Combo Kit', brand: 'INGCO', category: 'tools', price: 6999, originalPrice: 8000, rating: 4.5, reviews: 128, badge: 'sale', image: 'images/products/ingco-impact-wrench.jpg', shopifyUrl: SHOPIFY_BASE+'/products/ingco-20v-brushless-cordless-impact-wrench-combo-kit', description: 'Professional-grade 20V cordless impact wrench with brushless motor. 300Nm torque for quick wheel changes.', features: ['300Nm Torque','Brushless Motor','LED Light','2-Year Warranty'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'fuel-pump-test-kit', name: 'Motorcycle Fuel Pump Pressure Test Kit', brand: 'Bikecare360', category: 'tools', price: 1899, originalPrice: 2500, rating: 4.3, reviews: 67, badge: 'new', image: 'images/products/fuel-pump-test-kit.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motorcycle-fuel-pump-pressure-test-kit', description: 'Diagnose fuel delivery issues. Works with all major motorcycle fuel injection systems.', features: ['Universal Fit','Pressure Gauge','Carrying Case','1-Year Warranty'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'tool-kit-4in1', name: '4-in-1 Tool Kit Set (Chain Cover Removal)', brand: 'Bikecare360', category: 'tools', price: 499, originalPrice: 699, rating: 4.4, reviews: 203, badge: 'sale', image: 'images/products/tool-kit-4in1.jpg', shopifyUrl: SHOPIFY_BASE+'/products/4-in-1-tool-kit-set', description: '8mm socket, 10mm socket, T-handle & Phillips screwdriver bit. Perfect for chain cover removal.', features: ['8mm & 10mm Sockets','T-Handle','Phillips Bit','Compact Design'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'orca-mobile-holder', name: 'ORCA M21 PRO Mobile Holder for Bikes', brand: 'ORCA', category: 'tools', price: 899, originalPrice: 1299, rating: 4.6, reviews: 178, badge: 'sale', image: 'images/products/orca-mobile-holder.jpg', shopifyUrl: SHOPIFY_BASE+'/products/orca-m21-pro-mobile-holder-for-bikes-and-scooters', description: 'Universal bike mount with anti-vibration design. Fits handlebars and mirrors.', features: ['Anti-Vibration','360° Rotation','Universal Fit','One-Hand Operation'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+
+  // === GPS TRACKERS ===
+  { id: 'fleettrack-gps', name: 'Fleettrack Pro GPS Tracker (12 Months SIM)', brand: 'Fleettrack', category: 'gps-trackers', price: 2499, originalPrice: 5999, rating: 4.2, reviews: 89, badge: 'sale', image: 'images/products/fleettrack-gps.png', shopifyUrl: SHOPIFY_BASE+'/products/fleettrack-pro-gps-with-12-months-sim-recharge', description: 'Real-time GPS tracking with anti-theft alerts, trip history, and geofencing via mobile app.', features: ['Real-time Tracking','Anti-theft Alerts','IP67 Waterproof','12-Month Free SIM'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+
+  // === CHAIN CARE ===
+  { id: 'motul-chain-care-kit', name: 'Motul Chain Care Kit (C1+C2)', brand: 'Motul', category: 'chain-care', price: 979, originalPrice: 1130, rating: 4.7, reviews: 342, badge: 'youtube', image: 'images/products/motul-chain-care-kit.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-chain-care-kit', description: 'Complete chain maintenance kit with C1 Chain Clean and C2 Chain Lube.', features: ['C1 Clean 400ml','C2 Lube 400ml','O-Ring Safe','YouTube Recommended'], bikeBrands: ['bajaj','yamaha','royal-enfield','ktm'] },
+  { id: 'motul-chain-combo-tool', name: 'Motul Chain Care Kit + 4-in-1 Tool Combo', brand: 'Motul', category: 'chain-care', price: 1299, originalPrice: 1829, rating: 4.8, reviews: 145, badge: 'sale', image: 'images/products/motul-chain-care-kit-2.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-full-chain-care-kit-4-in-1-tool-kit-combo', description: 'Best value combo: Motul C1+C2 chain kit with 4-in-1 tool set for complete chain service.', features: ['C1+C2 Kit','4-in-1 Tools','Save ₹530','Complete Solution'], bikeBrands: ['bajaj','yamaha','royal-enfield','ktm'] },
+  { id: 'chain-lube-cleaner', name: 'Chain Lubricant & Cleaner 300ML', brand: 'Bikecare360', category: 'chain-care', price: 399, originalPrice: 549, rating: 4.3, reviews: 187, badge: 'sale', image: 'images/products/chain-lube-cleaner.png', shopifyUrl: SHOPIFY_BASE+'/products/chain-lubricant-cleaner-300ml', description: 'All-in-one chain lubricant and cleaner spray. 300ml can for multiple applications.', features: ['2-in-1 Formula','300ml Can','All Chain Types','Easy Spray'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-chain-clean-c1', name: 'Motul Chain Clean C1 150ml', brand: 'Motul', category: 'chain-care', price: 349, originalPrice: 425, rating: 4.5, reviews: 210, badge: null, image: 'images/products/motul-chain-clean-c1.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-chain-clean-c1-150ml', description: 'Powerful degreaser for motorcycle chains. Removes dirt, grime, and old lubricant.', features: ['150ml Spray','Fast Acting','O-Ring Safe','Motul Quality'], bikeBrands: ['bajaj','yamaha','royal-enfield','ktm'] },
+  { id: 'motul-chain-lube-c2', name: 'Motul Chain Lube C2 150ml', brand: 'Motul', category: 'chain-care', price: 379, originalPrice: 450, rating: 4.6, reviews: 198, badge: null, image: 'images/products/motul-chain-lube-c2.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-chain-lube-c2-150ml', description: 'White chain lube for road motorcycles. Long-lasting protection against wear and corrosion.', features: ['150ml Spray','White Lube','Anti-Fling','Road Use'], bikeBrands: ['bajaj','yamaha','royal-enfield','ktm'] },
+  { id: 'motul-chain-maintenance-kit', name: 'Motul Chain Maintenance Kit C1&C2 300ml', brand: 'Motul', category: 'chain-care', price: 849, originalPrice: 999, rating: 4.7, reviews: 276, badge: 'youtube', image: 'images/products/motul-chain-care-kit.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-chain-maintenance-kit-c1-c2-300ml', description: 'Professional chain maintenance kit with 300ml each of C1 Clean and C2 Lube.', features: ['C1 Clean 300ml','C2 Lube 300ml','Value Pack','Pro Grade'], bikeBrands: ['bajaj','yamaha','royal-enfield','ktm'] },
+
+  // === CLEANERS ===
+  { id: 'wavex-bike-wash', name: 'GLOBAL Carburetor & Throttle Body Cleaner 150ml', brand: 'Global', category: 'cleaners', price: 299, originalPrice: 449, rating: 4.4, reviews: 231, badge: 'sale', image: 'images/products/carburetor-cleaner.jpg', shopifyUrl: SHOPIFY_BASE+'/products/global-carburetor-throttle-body-cleaner-150-ml', description: 'Fast-acting carburetor and throttle body cleaner. Removes carbon deposits and gum.', features: ['150ml Spray','Fast Evaporating','Carbon Removal','All Carbs'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-engine-flush', name: 'Motul Engine Flush 50ml', brand: 'Motul', category: 'cleaners', price: 199, originalPrice: 250, rating: 4.3, reviews: 156, badge: null, image: 'images/products/motul-engine-flush.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-engine-flush-50ml', description: 'Pre-oil-change engine flush. Cleans internal deposits for better oil circulation.', features: ['50ml Bottle','Pre-Change Use','Cleans Deposits','All Engines'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-petrol-cleaner', name: 'Motul Petrol System Clean Plus 50ml', brand: 'Motul', category: 'cleaners', price: 249, originalPrice: 310, rating: 4.4, reviews: 134, badge: null, image: 'images/products/motul-petrol-cleaner.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-petrol-system-clean-plus-50ml', description: 'Fuel additive that cleans injectors and combustion chambers. Restores engine performance.', features: ['50ml Additive','Injector Cleaning','Better Mileage','Easy Pour'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-combo-petrol-flush', name: 'Motul Petrol Cleaner + Engine Flush Combo', brand: 'Motul', category: 'cleaners', price: 399, originalPrice: 560, rating: 4.5, reviews: 98, badge: 'sale', image: 'images/products/motul-combo-petrol-flush.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-petrol-system-cleaner-and-engine-flush-combo', description: 'Complete internal cleaning combo. Use before every oil change for best results.', features: ['Petrol Cleaner 50ml','Engine Flush 50ml','Save ₹161','Complete Clean'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  // === MOTUL ENGINE OILS ===
+  { id: 'motul-7100-10w40', name: 'Motul 7100 10W-40 Fully Synthetic 1L', brand: 'Motul', category: 'engine-oil', price: 899, originalPrice: 1050, rating: 4.8, reviews: 512, badge: 'youtube', image: 'images/products/motul-7100-10w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-7100-10w40-fully-synthetic-ester-4t-1l', description: '100% synthetic with ester technology. JASO MA2 certified.', features: ['100% Synthetic','Ester Tech','JASO MA2','1 Litre'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-7100-10w30', name: 'Motul 7100 10W-30 Fully Synthetic 1L', brand: 'Motul', category: 'engine-oil', price: 879, originalPrice: 1020, rating: 4.7, reviews: 324, badge: null, image: 'images/products/motul-7100-10w30.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-7100-10w30-fully-synthetic-ester-1l', description: 'Fully synthetic ester-based oil for smooth clutch performance. JASO MA2.', features: ['100% Synthetic','Ester Tech','JASO MA2','1 Litre'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','suzuki'] },
+  { id: 'motul-7100-10w50', name: 'Motul 7100 10W-50 Fully Synthetic 1L', brand: 'Motul', category: 'engine-oil', price: 949, originalPrice: 1100, rating: 4.7, reviews: 267, badge: null, image: 'images/products/motul-7100-10w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-7100-10w50-fully-synthetic-ester-4t-1l', description: 'High viscosity synthetic oil for performance bikes. Ester technology.', features: ['100% Synthetic','10W-50 Grade','Ester Tech','1 Litre'], bikeBrands: ['royal-enfield','ktm','bajaj'] },
+  { id: 'motul-7100-20w50', name: 'Motul 7100 20W-50 Fully Synthetic 1L', brand: 'Motul', category: 'engine-oil', price: 869, originalPrice: 999, rating: 4.6, reviews: 289, badge: null, image: 'images/products/motul-7100-20w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-7100-20w50-fully-synthetic-ester-4t-1l', description: 'Heavy-duty synthetic oil for cruisers and touring bikes.', features: ['100% Synthetic','20W-50 Grade','Ester Tech','1 Litre'], bikeBrands: ['royal-enfield','bajaj','honda'] },
+  { id: 'motul-5100-10w40', name: 'Motul 5100 10W-40 Technosynthese 1L', brand: 'Motul', category: 'engine-oil', price: 699, originalPrice: 820, rating: 4.6, reviews: 445, badge: 'youtube', image: 'images/products/motul-5100-10w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-5100-10w40-ester-technosynthese-4t-1l', description: 'Semi-synthetic with ester technology. Great balance of price and performance.', features: ['Technosynthese','Ester Blend','JASO MA2','1 Litre'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','royal-enfield','ktm','suzuki'] },
+  { id: 'motul-5100-15w50', name: 'Motul 5100 15W-50 Technosynthese 1L', brand: 'Motul', category: 'engine-oil', price: 729, originalPrice: 850, rating: 4.5, reviews: 198, badge: null, image: 'images/products/motul-5100-15w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-5100-15w50-ester-technosynthese-4t-1l', description: 'Semi-synthetic oil for air-cooled engines. Extra protection in hot climates.', features: ['Technosynthese','15W-50 Grade','Air-Cooled Friendly','1 Litre'], bikeBrands: ['royal-enfield','bajaj','hero'] },
+  { id: 'motul-3100-20w50', name: 'Motul 3100 Gold 20W-50 Technosynthese 1L', brand: 'Motul', category: 'engine-oil', price: 499, originalPrice: 599, rating: 4.4, reviews: 367, badge: null, image: 'images/products/motul-3100-20w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-3100gold-20w50-technosynthese-4t-1l', description: 'Entry-level semi-synthetic. Great for daily commuters.', features: ['Technosynthese','20W-50 Grade','JASO MA2','1 Litre'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','suzuki'] },
+  { id: 'motul-300v-10w40', name: 'Motul 300V 10W-40 Factory Line 1L', brand: 'Motul', category: 'engine-oil', price: 1499, originalPrice: 1799, rating: 4.9, reviews: 156, badge: 'youtube', image: 'images/products/motul-300v-10w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-300v-10w40-ester-core-4t-1l', description: 'Race-grade fully synthetic with double ester technology. Maximum power output.', features: ['Double Ester','Race Grade','Factory Line','1 Litre'], bikeBrands: ['ktm','yamaha','bajaj','royal-enfield'] },
+  { id: 'motul-300v-15w50', name: 'Motul 300V 15W-50 Factory Line 1L', brand: 'Motul', category: 'engine-oil', price: 1549, originalPrice: 1850, rating: 4.9, reviews: 112, badge: null, image: 'images/products/motul-300v-15w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-300v-15w50-fully-synthetic-ester-core-4t-1l', description: 'Race-proven high viscosity oil for track and performance riding.', features: ['Double Ester','15W-50 Grade','Track Proven','1 Litre'], bikeBrands: ['ktm','yamaha','bajaj','royal-enfield'] },
+  { id: 'motul-300v2-10w50', name: 'Motul 300V2 10W-50 Factory Line 1L', brand: 'Motul', category: 'engine-oil', price: 1799, originalPrice: 2100, rating: 4.9, reviews: 87, badge: 'new', image: 'images/products/motul-300v2-10w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-300v2-10w50-fully-synthetic-ester-core-4t-1l', description: 'Next-gen racing oil. Enhanced ester core for maximum mechanical grip.', features: ['Ester Core 2.0','Competition Grade','10W-50','1 Litre'], bikeBrands: ['ktm','yamaha','bajaj'] },
+  { id: 'motul-3000-20w40', name: 'Motul 3000 20W-40 HC-Tech 1L', brand: 'Motul', category: 'engine-oil', price: 399, originalPrice: 475, rating: 4.3, reviews: 534, badge: null, image: 'images/products/motul-3000-20w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-3000-20w40-hc-tech-4t-1l', description: 'Mineral oil with HC-Tech formula. Budget-friendly daily riding oil.', features: ['HC-Tech','Mineral Oil','JASO MA2','1 Litre'], bikeBrands: ['honda','hero','bajaj','tvs','yamaha','suzuki'] },
+  { id: 'motul-3000-15w50', name: 'Motul 3000 15W-50 HC-Tech 2.5L', brand: 'Motul', category: 'engine-oil', price: 899, originalPrice: 1050, rating: 4.3, reviews: 145, badge: null, image: 'images/products/motul-3000-15w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-3000-15w50-hc-tech-4t-2-5l', description: 'Family pack mineral oil. 2.5L for multiple oil changes.', features: ['HC-Tech','15W-50 Grade','2.5 Litres','Value Pack'], bikeBrands: ['royal-enfield','bajaj'] },
+  { id: 'motul-scooter-5w30', name: 'Motul Scooter Expert LE 5W-30 600ml', brand: 'Motul', category: 'engine-oil', price: 449, originalPrice: 540, rating: 4.4, reviews: 178, badge: null, image: 'images/products/motul-scooter-5w30.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-5w-30-scooter-expert-le-4t-600ml', description: 'Scooter-specific low emission formula. 5W-30 for fuel economy.', features: ['Scooter Specific','Low Emission','5W-30 Grade','600ml'], bikeBrands: ['honda','tvs','suzuki','hero'] },
+  { id: 'motul-scooter-5w40', name: 'Motul Scooter Power LE 5W-40 Synthetic 800ml', brand: 'Motul', category: 'engine-oil', price: 599, originalPrice: 720, rating: 4.5, reviews: 134, badge: null, image: 'images/products/motul-scooter-5w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-5w-40-synthetic-scooter-power-le-4t-800ml', description: 'Premium synthetic scooter oil. Maximum protection for CVT scooters.', features: ['Synthetic','5W-40 Grade','CVT Compatible','800ml'], bikeBrands: ['honda','tvs','suzuki','hero','yamaha'] },
+  { id: 'motul-gear-oil', name: 'Motul Scooter Gear Oil 80W-90 120ml', brand: 'Motul', category: 'engine-oil', price: 179, originalPrice: 220, rating: 4.3, reviews: 245, badge: null, image: 'images/products/motul-gear-oil.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-scooter-gear-oil-80w90-120ml', description: 'Gear oil for scooter final drive. Smooth shifting and reduced noise.', features: ['80W-90 Grade','120ml','Scooter Gearbox','Smooth Shifting'], bikeBrands: ['honda','tvs','suzuki','hero','yamaha'] },
+  { id: 'motul-scooter-10w30', name: 'Motul Scooter LE 10W-30 800ml', brand: 'Motul', category: 'engine-oil', price: 479, originalPrice: 570, rating: 4.4, reviews: 156, badge: null, image: 'images/products/motul-scooter-10w30.jpg', shopifyUrl: SHOPIFY_BASE+'/products/motul-scooter-le-api-sn10w30-800ml', description: 'API SN certified scooter oil. Balanced protection and fuel efficiency.', features: ['API SN','10W-30 Grade','800ml','Scooter Specific'], bikeBrands: ['honda','tvs','suzuki','hero'] },
+  // === BAJAJ OILS ===
+  { id: 'bajaj-10w30', name: 'Bajaj DTS-i 10W-30 Premium 4T 1L', brand: 'Bajaj', category: 'engine-oil', price: 299, originalPrice: 350, rating: 4.4, reviews: 312, badge: null, image: 'images/products/bajaj-10w30.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-dts-i-10w30-premium4t-jaso-ma2-api-sn-1l', description: 'Genuine Bajaj engine oil. JASO MA2 API SN certified.', features: ['Genuine Bajaj','10W-30','JASO MA2','1 Litre'], bikeBrands: ['bajaj'] },
+  { id: 'bajaj-10w40', name: 'Bajaj DTS-i 10W-40 Premium 4T 1.15L', brand: 'Bajaj', category: 'engine-oil', price: 349, originalPrice: 399, rating: 4.5, reviews: 278, badge: null, image: 'images/products/bajaj-10w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-dts-i-10w40-premium4t-jaso-ma2-api-sn-1-15l', description: 'Premium grade for Bajaj performance bikes. 1.15L pack.', features: ['Genuine Bajaj','10W-40','API SN','1.15 Litres'], bikeBrands: ['bajaj'] },
+  { id: 'bajaj-10w50', name: 'Bajaj DTS-i 10W-50 Premium 4T 1.2L', brand: 'Bajaj', category: 'engine-oil', price: 389, originalPrice: 450, rating: 4.5, reviews: 167, badge: null, image: 'images/products/bajaj-10w50.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-dts-i-jaso-ma2-api-sn-10w50-1-2l', description: 'High viscosity oil for Bajaj KTM-platform bikes. 1.2L pack.', features: ['Genuine Bajaj','10W-50','JASO MA2','1.2 Litres'], bikeBrands: ['bajaj'] },
+  { id: 'bajaj-20w50-1l', name: 'Bajaj DTS-i 20W-50 Premium 4T 1L', brand: 'Bajaj', category: 'engine-oil', price: 269, originalPrice: 320, rating: 4.3, reviews: 234, badge: null, image: 'images/products/bajaj-20w50-1l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-dts-i-20w50-premium4t-jaso-ma2-api-sn-1l', description: 'Standard grade oil for Bajaj commuter bikes.', features: ['Genuine Bajaj','20W-50','JASO MA2','1 Litre'], bikeBrands: ['bajaj'] },
+  { id: 'bajaj-20w50-115l', name: 'Bajaj DTS-i 20W-50 Premium 4T 1.15L', brand: 'Bajaj', category: 'engine-oil', price: 299, originalPrice: 360, rating: 4.3, reviews: 189, badge: null, image: 'images/products/bajaj-20w50-1.15l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-dts-i-20w50-premium4t-jaso-ma2-api-sn-1-15l', description: 'Standard grade oil. 1.15L pack for Bajaj Pulsar series.', features: ['Genuine Bajaj','20W-50','API SN','1.15 Litres'], bikeBrands: ['bajaj'] },
+  { id: 'bajaj-freedom-10w40', name: 'Bajaj Freedom 10W-40 CNG Oil 1L', brand: 'Bajaj', category: 'engine-oil', price: 349, originalPrice: 420, rating: 4.4, reviews: 56, badge: 'new', image: 'images/products/bajaj-freedom-10w40.jpg', shopifyUrl: SHOPIFY_BASE+'/products/bajaj-freedom-10w40-cng-oil1l', description: 'Specially formulated for Bajaj Freedom CNG motorcycle.', features: ['CNG Specific','10W-40','Bajaj Freedom','1 Litre'], bikeBrands: ['bajaj'] },
+
+  // === HERO OILS ===
+  { id: 'hero-xotic-10w30', name: 'Hero Xotic+ 10W-30 Fully Synthetic 1.25L', brand: 'Hero', category: 'engine-oil', price: 349, originalPrice: 420, rating: 4.5, reviews: 198, badge: null, image: 'images/products/hero-xotic-10w30.jpg', shopifyUrl: SHOPIFY_BASE+'/products/hero-100-synthetic-engine-oil-xotic-sae-10w30-1-25l', description: '100% synthetic premium oil from Hero Genuine Parts.', features: ['100% Synthetic','10W-30','Hero Genuine','1.25 Litres'], bikeBrands: ['hero'] },
+  { id: 'hero-4t-10w30-1l', name: 'Hero 4T Plus 10W-30 Synthetic 1L', brand: 'Hero', category: 'engine-oil', price: 279, originalPrice: 330, rating: 4.4, reviews: 267, badge: null, image: 'images/products/hero-4t-10w30-1l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/hero-genuine-4t-plus-synthetic-engine-oil-10w30-sl-1l', description: 'Hero genuine semi-synthetic. SL grade for all Hero bikes.', features: ['Semi-Synthetic','10W-30','SL Grade','1 Litre'], bikeBrands: ['hero'] },
+  { id: 'hero-4t-10w30-900ml', name: 'Hero 4T Plus 10W-30 Synthetic 900ml', brand: 'Hero', category: 'engine-oil', price: 259, originalPrice: 299, rating: 4.4, reviews: 178, badge: null, image: 'images/products/hero-4t-10w30-900ml.jpg', shopifyUrl: SHOPIFY_BASE+'/products/hero-genuine-4t-plus-synthetic-engine-oil-10w30-sl-900ml', description: 'Hero genuine oil in 900ml pack for 150cc+ bikes.', features: ['Semi-Synthetic','10W-30','SL Grade','900ml'], bikeBrands: ['hero'] },
+  { id: 'hero-4t-10w30-800ml', name: 'Hero 4T Plus 10W-30 Synthetic 800ml', brand: 'Hero', category: 'engine-oil', price: 239, originalPrice: 280, rating: 4.3, reviews: 312, badge: null, image: 'images/products/hero-4t-10w30-800ml.jpg', shopifyUrl: SHOPIFY_BASE+'/products/hero-genuine-4t-plus-synthetic-engine-oil-10w30-sl-800ml', description: 'Hero genuine oil in 800ml pack for 100-125cc bikes.', features: ['Semi-Synthetic','10W-30','SL Grade','800ml'], bikeBrands: ['hero'] },
+
+  // === HONDA OILS ===
+  { id: 'honda-5w30-1l', name: 'Honda Pro Genuine 5W-30 BS6 1L', brand: 'Honda', category: 'engine-oil', price: 399, originalPrice: 470, rating: 4.6, reviews: 345, badge: 'youtube', image: 'images/products/honda-5w30-1l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-5w-30-bs6-1l', description: 'BS6 compliant genuine Honda oil. Recommended for all Honda BS6 bikes.', features: ['BS6 Compliant','5W-30','Honda Genuine','1 Litre'], bikeBrands: ['honda'] },
+  { id: 'honda-5w30-800ml', name: 'Honda Pro Genuine 5W-30 BS6 800ml', brand: 'Honda', category: 'engine-oil', price: 349, originalPrice: 410, rating: 4.5, reviews: 234, badge: null, image: 'images/products/honda-5w30-800ml.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-5w-30-bs6-800ml', description: 'BS6 genuine Honda oil in 800ml pack.', features: ['BS6 Compliant','5W-30','Honda Genuine','800ml'], bikeBrands: ['honda'] },
+  { id: 'honda-5w30-600ml', name: 'Honda Pro Genuine 5W-30 BS6 600ml', brand: 'Honda', category: 'engine-oil', price: 299, originalPrice: 350, rating: 4.5, reviews: 178, badge: null, image: 'images/products/honda-5w30-600ml.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-5w-30-bs6-600ml', description: 'BS6 genuine Honda oil in 600ml pack for scooters.', features: ['BS6 Compliant','5W-30','Honda Genuine','600ml'], bikeBrands: ['honda'] },
+  { id: 'honda-10w30-1l', name: 'Honda Pro Genuine 10W-30 1L', brand: 'Honda', category: 'engine-oil', price: 349, originalPrice: 420, rating: 4.5, reviews: 289, badge: null, image: 'images/products/honda-10w30-1l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-10w-30-1l', description: 'Classic Honda genuine oil. Universal fit for all Honda bikes.', features: ['Honda Genuine','10W-30','Universal','1 Litre'], bikeBrands: ['honda'] },
+  { id: 'honda-10w30-12l', name: 'Honda Pro Genuine 10W-30 1.2L', brand: 'Honda', category: 'engine-oil', price: 399, originalPrice: 480, rating: 4.5, reviews: 167, badge: null, image: 'images/products/honda-10w30-1.2l.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-10w-30-1-2l', description: 'Honda genuine oil in 1.2L pack for larger engines.', features: ['Honda Genuine','10W-30','1.2 Litres','All Models'], bikeBrands: ['honda'] },
+  { id: 'honda-10w30-800ml', name: 'Honda Pro Genuine 10W-30 800ml', brand: 'Honda', category: 'engine-oil', price: 299, originalPrice: 360, rating: 4.4, reviews: 198, badge: null, image: 'images/products/honda-10w30-800ml.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-10w-30-800ml', description: 'Honda genuine oil 800ml for 100-125cc bikes.', features: ['Honda Genuine','10W-30','800ml','Commuter Bikes'], bikeBrands: ['honda'] },
+  { id: 'honda-10w30-synthetic', name: 'Honda Pro Genuine 10W-30 Fully Synthetic 1L', brand: 'Honda', category: 'engine-oil', price: 499, originalPrice: 580, rating: 4.7, reviews: 145, badge: null, image: 'images/products/honda-10w30-synthetic.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-10w-30-fully-synthetic-1l', description: 'Premium fully synthetic Honda genuine oil.', features: ['Fully Synthetic','10W-30','Honda Premium','1 Litre'], bikeBrands: ['honda'] },
+  { id: 'honda-scooter-oil', name: 'Honda Pro Scooter Oil 10W-30 MB 800ml', brand: 'Honda', category: 'engine-oil', price: 329, originalPrice: 390, rating: 4.4, reviews: 256, badge: null, image: 'images/products/honda-scooter-oil.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-pro-honda-genuine-lubes-scooter-oil-jaso-mb-10w-30-800ml', description: 'JASO MB scooter-specific oil for Honda Activa, Dio, and Grazia.', features: ['JASO MB','Scooter Specific','10W-30','800ml'], bikeBrands: ['honda'] },
+  // === HONDA SPARES ===
+  { id: 'honda-brake-shoes', name: 'Honda Brake Shoe Set 06430GBJK20', brand: 'Honda', category: 'accessories', price: 349, originalPrice: 450, rating: 4.5, reviews: 178, badge: null, image: 'images/products/honda-brake-shoes.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-shoe-set-brake-06430gbjk20', description: 'Genuine Honda brake shoes. Direct replacement for Activa and Dio.', features: ['Genuine Honda','Direct Fit','OE Quality','Set of 2'], bikeBrands: ['honda'] },
+  { id: 'honda-oil-filter', name: 'Honda Oil Filter 15412K0ND01', brand: 'Honda', category: 'accessories', price: 199, originalPrice: 280, rating: 4.6, reviews: 234, badge: 'sale', image: 'images/products/honda-oil-filter.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-filter-comp-engine-oil-15412k0nd01', description: 'Genuine Honda engine oil filter. Keeps oil clean for longer engine life.', features: ['Genuine Honda','OE Part','Easy Install','High Filtration'], bikeBrands: ['honda'] },
+  { id: 'honda-damper-set', name: 'Honda Damper Set Wheel 06410K67900', brand: 'Honda', category: 'accessories', price: 299, originalPrice: 380, rating: 4.4, reviews: 89, badge: null, image: 'images/products/honda-damper-set.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-damper-set-wheel-06410k67900', description: 'Genuine Honda wheel damper set. Reduces vibration and noise.', features: ['Genuine Honda','OE Part','Vibration Reduction','Direct Fit'], bikeBrands: ['honda'] },
+  { id: 'honda-spark-plug', name: 'Honda Spark Plug UR6DC 31906KTE911', brand: 'Honda', category: 'accessories', price: 149, originalPrice: 199, rating: 4.7, reviews: 312, badge: null, image: 'images/products/honda-spark-plug.jpg', shopifyUrl: SHOPIFY_BASE+'/products/honda-spark-plug-ur6dc-31906kte911', description: 'Genuine Honda spark plug. Reliable ignition for smooth starts.', features: ['Genuine Honda','UR6DC','Reliable Ignition','OE Quality'], bikeBrands: ['honda'] },
+
+  // === ROYAL ENFIELD ACCESSORIES ===
+  { id: 're-air-filter', name: 'RE Air Filter Element 587343/A', brand: 'Royal Enfield', category: 'accessories', price: 450, originalPrice: 550, rating: 4.6, reviews: 156, badge: null, image: 'images/products/re-air-filter-1.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-air-filter-element-587343-a', description: 'Genuine-spec air filter for RE Classic, Bullet, and Meteor.', features: ['Direct Fit','High Filtration','Long Life','OE Spec'], bikeBrands: ['royal-enfield'] },
+  { id: 're-air-filter-2', name: 'RE Air Filter Element 143548/A', brand: 'Royal Enfield', category: 'accessories', price: 399, originalPrice: 499, rating: 4.5, reviews: 123, badge: null, image: 'images/products/re-air-filter-2.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-air-filter-element-143548-a', description: 'Air filter for newer Royal Enfield models.', features: ['Direct Fit','High Filtration','OE Spec','Easy Replace'], bikeBrands: ['royal-enfield'] },
+  { id: 're-adventure-screen', name: 'RE Adventure Touring Screen', brand: 'Royal Enfield', category: 'accessories', price: 3499, originalPrice: 4200, rating: 4.7, reviews: 67, badge: null, image: 'images/products/re-adventure-screen.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-adventure-screen', description: 'Genuine RE touring screen for wind protection on long rides.', features: ['Genuine RE','Wind Protection','Easy Mount','Touring Ready'], bikeBrands: ['royal-enfield'] },
+  { id: 're-soft-panniers', name: 'RE Adventure Soft Panniers', brand: 'Royal Enfield', category: 'accessories', price: 6999, originalPrice: 8500, rating: 4.8, reviews: 45, badge: null, image: 'images/products/re-soft-panniers.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-adventure-soft-panniers', description: 'Genuine RE soft panniers for adventure touring. Water-resistant.', features: ['Genuine RE','Water Resistant','Quick Release','Large Capacity'], bikeBrands: ['royal-enfield'] },
+  { id: 're-topbox-mount', name: 'RE Adventure Top Box Mount', brand: 'Royal Enfield', category: 'accessories', price: 2499, originalPrice: 3200, rating: 4.6, reviews: 34, badge: null, image: 'images/products/re-topbox-mount.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-adventure-top-box-mount', description: 'Genuine RE top box mounting bracket for Himalayan.', features: ['Genuine RE','Heavy Duty','Easy Install','Himalayan Fit'], bikeBrands: ['royal-enfield'] },
+  { id: 're-bar-end-mirror', name: 'RE Bar End Mirror Mounts', brand: 'Royal Enfield', category: 'accessories', price: 1799, originalPrice: 2200, rating: 4.5, reviews: 89, badge: null, image: 'images/products/re-bar-end-mirror.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-bar-end-mirror-mounts', description: 'Genuine RE bar end mirror mounts for a clean café racer look.', features: ['Genuine RE','CNC Machined','Multiple Colors','Cafe Racer Style'], bikeBrands: ['royal-enfield'] },
+  { id: 're-engine-guards', name: 'RE Black Adventure Engine Guards', brand: 'Royal Enfield', category: 'accessories', price: 4999, originalPrice: 5999, rating: 4.7, reviews: 56, badge: null, image: 'images/products/re-engine-guards.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-black-adventure-engine-guards', description: 'Heavy-duty engine crash guards for RE Himalayan.', features: ['Heavy Duty Steel','Powder Coated','Himalayan Fit','Drop Protection'], bikeBrands: ['royal-enfield'] },
+  { id: 're-handguards', name: 'RE Black Adventure Handguards', brand: 'Royal Enfield', category: 'accessories', price: 2999, originalPrice: 3600, rating: 4.6, reviews: 42, badge: null, image: 'images/products/re-handguards.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-black-adventure-handguards', description: 'Genuine RE handguards for wind and debris protection.', features: ['Genuine RE','Wind Protection','Debris Guard','Adventure Ready'], bikeBrands: ['royal-enfield'] },
+  { id: 're-handlebar', name: 'RE Black Adventure Handlebar', brand: 'Royal Enfield', category: 'accessories', price: 3499, originalPrice: 4200, rating: 4.5, reviews: 28, badge: null, image: 'images/products/re-handlebar.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-black-adventure-handlebar', description: 'Adventure-spec handlebar for upright riding position.', features: ['Genuine RE','22mm Diameter','Upright Position','Black Finish'], bikeBrands: ['royal-enfield'] },
+  { id: 're-pannier', name: 'RE Black Adventure Pannier', brand: 'Royal Enfield', category: 'accessories', price: 5999, originalPrice: 7200, rating: 4.7, reviews: 38, badge: null, image: 'images/products/re-pannier.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-black-adventure-pannier', description: 'Genuine RE hard pannier for secure luggage on tours.', features: ['Genuine RE','Hard Shell','Lockable','Waterproof'], bikeBrands: ['royal-enfield'] },
+  { id: 're-pannier-mount', name: 'RE Black Adventure Pannier Mount', brand: 'Royal Enfield', category: 'accessories', price: 2499, originalPrice: 3000, rating: 4.5, reviews: 31, badge: null, image: 'images/products/re-pannier-mount.jpg', shopifyUrl: SHOPIFY_BASE+'/products/re-black-adventure-pannier-mount', description: 'Mounting bracket for RE adventure panniers.', features: ['Genuine RE','Heavy Duty','Quick Release','Steel Construction'], bikeBrands: ['royal-enfield'] },
 ];
 
 const YOUTUBE_VIDEOS = [
-  {
-    id: 'dQw4w9WgXcQ',
-    title: 'How to Clean Your Bike Chain Like a Pro',
-    description: 'Step-by-step chain cleaning tutorial using Motul C1+C2',
-  },
-  {
-    id: 'dQw4w9WgXcQ',
-    title: 'Best Engine Oil for Your Bike — Complete Guide',
-    description: 'Comparing mineral, semi-synthetic, and fully synthetic oils',
-  },
-  {
-    id: 'dQw4w9WgXcQ',
-    title: 'GPS Tracker Installation — Full Tutorial',
-    description: 'Installing Fleettrack GPS on Royal Enfield Classic 350',
-  },
+  { id: 'dQw4w9WgXcQ', title: 'How to Clean Your Bike Chain Like a Pro', description: 'Step-by-step chain cleaning tutorial using Motul C1+C2' },
+  { id: 'dQw4w9WgXcQ', title: 'Best Engine Oil for Your Bike — Complete Guide', description: 'Comparing mineral, semi-synthetic, and fully synthetic oils' },
+  { id: 'dQw4w9WgXcQ', title: 'GPS Tracker Installation — Full Tutorial', description: 'Installing Fleettrack GPS on Royal Enfield Classic 350' },
 ];
 
 // Helper functions
-function formatPrice(price) {
-  return '₹' + price.toLocaleString('en-IN');
+function formatPrice(p) { return '₹' + p.toLocaleString('en-IN'); }
+function getDiscount(o, c) { return Math.round(((o - c) / o) * 100); }
+function renderStars(r) { const f=Math.floor(r),h=r%1>=0.5?1:0,e=5-f-h; return '★'.repeat(f)+(h?'½':'')+'☆'.repeat(e); }
+function getProductsByCategory(id) { return PRODUCTS.filter(p => p.category === id); }
+function getProductsByBrand(slug) { return PRODUCTS.filter(p => p.bikeBrands.includes(slug)); }
+function getBestSellers() { return [...PRODUCTS].sort((a,b) => b.reviews - a.reviews).slice(0, 4); }
+
+function searchProducts(query) {
+  const q = query.toLowerCase().trim();
+  if (!q) return [];
+  return PRODUCTS.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.brand.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q)
+  );
 }
 
-function getDiscount(original, current) {
-  return Math.round(((original - current) / original) * 100);
-}
-
-function renderStars(rating) {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0.5 ? 1 : 0;
-  const empty = 5 - full - half;
-  return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(empty);
-}
-
-function getProductsByCategory(categoryId) {
-  return PRODUCTS.filter(p => p.category === categoryId);
-}
-
-function getProductsByBrand(brandSlug) {
-  return PRODUCTS.filter(p => p.bikeBrands.includes(brandSlug));
-}
-
-function getBestSellers() {
-  return [...PRODUCTS].sort((a, b) => b.reviews - a.reviews).slice(0, 4);
+function getProductsSorted(products, sortBy) {
+  const sorted = [...products];
+  switch(sortBy) {
+    case 'price-low': return sorted.sort((a,b) => a.price - b.price);
+    case 'price-high': return sorted.sort((a,b) => b.price - a.price);
+    case 'rating': return sorted.sort((a,b) => b.rating - a.rating);
+    case 'popular': return sorted.sort((a,b) => b.reviews - a.reviews);
+    default: return sorted;
+  }
 }
 
 function renderProductCard(product) {
-  const discount = getDiscount(product.originalPrice, product.price);
-  const badgeHTML = product.badge
-    ? `<span class="product-badge ${product.badge}">${
-        product.badge === 'sale' ? `-${discount}%` :
-        product.badge === 'new' ? 'New' :
-        product.badge === 'youtube' ? '▶ YouTube' : product.badge
-      }</span>`
-    : '';
-
-  return `
-    <div class="product-card">
-      <a href="pages/products/${product.id}.html" class="product-image">
-        <img src="${product.image}" alt="${product.name}" loading="lazy">
-        ${badgeHTML}
-      </a>
-      <div class="product-info">
-        <div class="product-brand">${product.brand}</div>
-        <h4><a href="pages/products/${product.id}.html">${product.name}</a></h4>
-        <div class="product-rating">
-          <span class="stars">${renderStars(product.rating)}</span>
-          <span class="count">(${product.reviews})</span>
-        </div>
-        <div class="product-pricing">
-          <span class="price">${formatPrice(product.price)}</span>
-          <span class="original-price">${formatPrice(product.originalPrice)}</span>
-          <span class="discount">${discount}% off</span>
-        </div>
-        <div class="product-actions">
-          <a href="${product.shopifyUrl}" target="_blank" rel="noopener" class="btn btn-shopify btn-sm">Buy Now</a>
-          <a href="pages/products/${product.id}.html" class="btn btn-outline btn-sm">Details</a>
-        </div>
-      </div>
-    </div>
-  `;
+  const d = getDiscount(product.originalPrice, product.price);
+  const badge = product.badge ? `<span class="product-badge ${product.badge}">${product.badge==='sale'?`-${d}%`:product.badge==='new'?'New':product.badge==='youtube'?'▶ YouTube':product.badge}</span>` : '';
+  return `<div class="product-card"><a href="pages/products/${product.id}.html" class="product-image"><img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="400" height="400">${badge}</a><div class="product-info"><div class="product-brand">${product.brand}</div><h4><a href="pages/products/${product.id}.html">${product.name}</a></h4><div class="product-rating"><span class="stars">${renderStars(product.rating)}</span><span class="count">(${product.reviews})</span></div><div class="product-pricing"><span class="price">${formatPrice(product.price)}</span><span class="original-price">${formatPrice(product.originalPrice)}</span><span class="discount">${d}% off</span></div><div class="product-actions"><a href="${product.shopifyUrl}" target="_blank" rel="noopener" class="btn btn-shopify btn-sm">Buy Now</a><a href="pages/products/${product.id}.html" class="btn btn-outline btn-sm">Details</a></div></div></div>`;
 }
 
-// Make relative paths work from any page depth
 function renderProductCardWithBase(product, basePath) {
-  const discount = getDiscount(product.originalPrice, product.price);
-  const badgeHTML = product.badge
-    ? `<span class="product-badge ${product.badge}">${
-        product.badge === 'sale' ? `-${discount}%` :
-        product.badge === 'new' ? 'New' :
-        product.badge === 'youtube' ? '▶ YouTube' : product.badge
-      }</span>`
-    : '';
-
-  return `
-    <div class="product-card">
-      <a href="${basePath}pages/products/${product.id}.html" class="product-image">
-        <img src="${product.image}" alt="${product.name}" loading="lazy">
-        ${badgeHTML}
-      </a>
-      <div class="product-info">
-        <div class="product-brand">${product.brand}</div>
-        <h4><a href="${basePath}pages/products/${product.id}.html">${product.name}</a></h4>
-        <div class="product-rating">
-          <span class="stars">${renderStars(product.rating)}</span>
-          <span class="count">(${product.reviews})</span>
-        </div>
-        <div class="product-pricing">
-          <span class="price">${formatPrice(product.price)}</span>
-          <span class="original-price">${formatPrice(product.originalPrice)}</span>
-          <span class="discount">${discount}% off</span>
-        </div>
-        <div class="product-actions">
-          <a href="${product.shopifyUrl}" target="_blank" rel="noopener" class="btn btn-shopify btn-sm">Buy Now</a>
-          <a href="${basePath}pages/products/${product.id}.html" class="btn btn-outline btn-sm">Details</a>
-        </div>
-      </div>
-    </div>
-  `;
+  const d = getDiscount(product.originalPrice, product.price);
+  const badge = product.badge ? `<span class="product-badge ${product.badge}">${product.badge==='sale'?`-${d}%`:product.badge==='new'?'New':product.badge==='youtube'?'▶ YouTube':product.badge}</span>` : '';
+  return `<div class="product-card"><a href="${basePath}pages/products/${product.id}.html" class="product-image"><img src="${basePath}${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="400" height="400">${badge}</a><div class="product-info"><div class="product-brand">${product.brand}</div><h4><a href="${basePath}pages/products/${product.id}.html">${product.name}</a></h4><div class="product-rating"><span class="stars">${renderStars(product.rating)}</span><span class="count">(${product.reviews})</span></div><div class="product-pricing"><span class="price">${formatPrice(product.price)}</span><span class="original-price">${formatPrice(product.originalPrice)}</span><span class="discount">${d}% off</span></div><div class="product-actions"><a href="${product.shopifyUrl}" target="_blank" rel="noopener" class="btn btn-shopify btn-sm">Buy Now</a><a href="${basePath}pages/products/${product.id}.html" class="btn btn-outline btn-sm">Details</a></div></div></div>`;
 }
